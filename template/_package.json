@@ -16,7 +16,7 @@
     "cross-env": "^5.2.0",
     "nuxt-purgecss": "^0.2.1"<% if (edge) { %>,
     "nuxt-edge": "latest"<% } else { %>,
-    "nuxt": "^2.5.1"<% } %><% if (axios === 'yes') { %>,
+    "nuxt": "^2.6.1"<% } %><% if (axios === 'yes') { %>,
     "@nuxtjs/axios": "^5.3.6"<% } %><% if (pwa === 'yes') { %>,
     "@nuxtjs/pwa": "^2.6.0"<% } %><% if (typescript === 'yes') { %>,
     "@nuxt/typescript": "^2.5.1",
