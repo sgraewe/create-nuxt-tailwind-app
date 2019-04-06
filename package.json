@@ -1,6 +1,6 @@
 {
   "name": "create-nuxt-tailwind-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a Nuxt.js app using Tailwind CSS & Purgecss without the distraction of a complicated development environment.",
   "bin": "cli.js",
   "files": [
