@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "@nuxtjs/tailwindcss": "^0.0.1"<% if (edge) { %>,
+    "nuxt-purgecss": "^0.2.1"<% if (edge) { %>,
     "nuxt-edge": "latest"<% } else { %>,
     "nuxt": "^2.5.1"<% } %><% if (axios === 'yes') { %>,
     "@nuxtjs/axios": "^5.3.6"<% } %><% if (pwa === 'yes') { %>,
@@ -30,7 +30,8 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.6.0",
-    "postcss-url": "^8.0.0"<% if (eslint === 'yes') { %>,
+    "postcss-url": "^8.0.0",
+    "tailwindcss": "^1.0.0-beta.4"<% if (eslint === 'yes') { %>,
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",

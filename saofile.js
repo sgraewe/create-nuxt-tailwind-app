@@ -118,6 +118,12 @@ module.exports = {
 
     actions.push({
       type: 'add',
+      files: '**',
+      templateDir: 'template/frameworks/tailwindcss'
+    })
+
+    actions.push({
+      type: 'add',
       files: '*',
       filters: {
         '_.eslintrc.js': 'features.includes("linter")',
