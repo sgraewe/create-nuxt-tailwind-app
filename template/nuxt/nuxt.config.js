@@ -83,7 +83,7 @@ module.exports = {
         'cssnano': {
           preset: 'default',
           discardComments: { removeAll: true },
-          zindex: false
+          zIndex: false
         }
       },
       // Change the postcss-preset-env settings
