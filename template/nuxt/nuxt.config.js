@@ -78,7 +78,6 @@ module.exports = {
       // Add plugin names as key and arguments as value
       // Disable a plugin by passing false as value
       plugins: {
-        'postcss-import': {},
         'postcss-url': {},
         'tailwindcss': path.resolve(__dirname, './tailwind.config.js'),
         'cssnano': {
