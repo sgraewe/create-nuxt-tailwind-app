@@ -58,7 +58,9 @@ module.exports = {
   ** PurgeCSS
   ** https://github.com/Developmint/nuxt-purgecss
   */
-  purgeCSS: {},
+  purgeCSS: {
+    mode: 'postcss'
+  },
 
   /*
   ** This option is given directly to the vue-router Router constructor
@@ -96,10 +98,6 @@ module.exports = {
         }
       }
     },
-    /*
-    ** Extract CSS
-    */
-    extractCSS: true,
     /*
     ** You can extend webpack config here
     */
