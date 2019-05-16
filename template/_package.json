@@ -16,21 +16,21 @@
     "cross-env": "^5.2.0",
     "nuxt-purgecss": "^0.2.1"<% if (edge) { %>,
     "nuxt-edge": "latest"<% } else { %>,
-    "nuxt": "^2.6.1"<% } %><% if (axios === 'yes') { %>,
+    "nuxt": "^2.7.1"<% } %><% if (axios === 'yes') { %>,
     "@nuxtjs/axios": "^5.3.6"<% } %><% if (pwa === 'yes') { %>,
     "@nuxtjs/pwa": "^2.6.0"<% } %><% if (typescript === 'yes') { %>,
     "@nuxt/typescript": "^2.5.1",
     "vue-property-decorator": "^8.1.0"<% } %>
   },
   "devDependencies": {
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.19.0",
     "@vue/test-utils": "^1.0.0-beta.29",
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.5.1",
     "cssnano": "^4.1.10",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.6.0",
     "postcss-url": "^8.0.0",
-    "tailwindcss": "^1.0.0-beta.4"<% if (eslint === 'yes') { %>,
+    "tailwindcss": "^1.0.1"<% if (eslint === 'yes') { %>,
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
@@ -43,8 +43,8 @@
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2"<% } %><% if (prettier === 'yes') { %>,
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.16.4"<% } %>
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1"<% } %>
   }
 }
