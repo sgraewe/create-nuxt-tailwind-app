@@ -49,7 +49,7 @@ module.exports = {
   /*
   ** Axios module configuration	  ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
-  */	  */
+  */
   axios: {
     // See https://axios.nuxtjs.org/options
   },<% } %>
