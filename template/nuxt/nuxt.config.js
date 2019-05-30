@@ -1,4 +1,3 @@
-const pkg = require('./package')
 const path = require('path')
 
 module.exports = {
@@ -8,12 +7,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | ' + pkg.name,
+    titleTemplate: '%s | ' + process.env.npm_package_name || '',
     htmlAttrs: { lang: 'en' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -45,11 +44,12 @@ module.exports = {
     '@nuxtjs/axios',
     <% } %><% if (pwa === 'yes') { %>
     '@nuxtjs/pwa',<% } %>
-  ],<% if (axios === 'yes') { %>
-
+  ],
+  <% if (axios === 'yes') { %>
   /*
-  ** Axios module configuration
-  */
+  ** Axios module configuration	  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */	  */
   axios: {
     // See https://axios.nuxtjs.org/options
   },<% } %>
