@@ -47,7 +47,7 @@ module.exports = {
   ],
   <% if (axios === 'yes') { %>
   /*
-  ** Axios module configuration	  ** Axios module configuration
+  ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
