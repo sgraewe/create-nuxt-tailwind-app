@@ -18,9 +18,7 @@
     "nuxt-edge": "latest"<% } else { %>,
     "nuxt": "^2.7.1"<% } %><% if (axios === 'yes') { %>,
     "@nuxtjs/axios": "^5.3.6"<% } %><% if (pwa === 'yes') { %>,
-    "@nuxtjs/pwa": "^2.6.0"<% } %><% if (typescript === 'yes') { %>,
-    "@nuxt/typescript": "^2.5.1",
-    "vue-property-decorator": "^8.1.0"<% } %>
+    "@nuxtjs/pwa": "^2.6.0"<% } %>
   },
   "devDependencies": {
     "nodemon": "^1.19.0",

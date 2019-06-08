@@ -37,10 +37,6 @@ module.exports = {
         {
           name: 'Axios',
           value: 'axios'
-        },
-        {
-          name: 'TypeScript Support',
-          value: 'typescript'
         }
       ],
       default: []
@@ -71,25 +67,23 @@ module.exports = {
     }
   ],
 
-  templateData () {
+  templateData() {
     const edge = process.argv.includes('--edge')
     const pwa = this.answers.features.includes('pwa')
     const linter = this.answers.features.includes('linter')
     const prettier = this.answers.features.includes('prettier')
     const axios = this.answers.features.includes('axios')
-    const typescript = this.answers.features.includes('typescript')
 
     return {
       edge,
       pwa: pwa ? 'yes' : 'no',
       eslint: linter ? 'yes' : 'no',
       prettier: prettier ? 'yes' : 'no',
-      axios: axios ? 'yes' : 'no',
-      typescript: typescript ? 'yes' : 'no'
+      axios: axios ? 'yes' : 'no'
     }
   },
 
-  actions () {
+  actions() {
     const validation = validate(this.answers.name)
     validation.warnings && validation.warnings.forEach((warn) => {
       console.warn('Warning:', warn)
@@ -107,14 +101,6 @@ module.exports = {
         'static/icon.png': 'features.includes("pwa")'
       }
     }]
-
-    if (this.answers.features.includes('typescript')) {
-      actions.push({
-        type: 'add',
-        files: '**',
-        templateDir: 'template/frameworks/typescript'
-      })
-    }
 
     actions.push({
       type: 'add',
@@ -135,7 +121,6 @@ module.exports = {
       type: 'move',
       patterns: {
         '_.gitignore': '.gitignore',
-        '_package.json': 'package.json',
         '_.eslintrc.js': '.eslintrc.js',
         '_.prettierrc': '.prettierrc'
       }
@@ -144,7 +129,7 @@ module.exports = {
     return actions
   },
 
-  async completed () {
+  async completed() {
     this.gitInit()
 
     await this.npmInstall({ npmClient: this.answers.pm })
