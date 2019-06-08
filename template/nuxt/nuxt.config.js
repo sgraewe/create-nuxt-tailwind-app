@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   mode: '<%= mode %>',
 
@@ -82,7 +80,7 @@ module.exports = {
       // Disable a plugin by passing false as value
       plugins: {
         'postcss-url': {},
-        'tailwindcss': path.resolve(__dirname, './tailwind.config.js'),
+        tailwindcss: './tailwind.config.js',
         'cssnano': {
           preset: 'default',
           discardComments: { removeAll: true },
@@ -101,8 +99,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-
-    }
+    extend(config, ctx) {}
   }
 }
