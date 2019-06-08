@@ -33,7 +33,6 @@ yarn create nuxt-tailwind-app <my-project>
    - Linter / Formatter
    - [Prettier](https://prettier.io/)
    - [Axios](https://github.com/nuxt-community/axios-module)
-   - [TypeScript](https://www.typescriptlang.org/)
 
 ## Optional
 
