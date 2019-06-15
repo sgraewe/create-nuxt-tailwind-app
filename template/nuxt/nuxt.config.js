@@ -36,14 +36,21 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'nuxt-purgecss',
     <% if (axios === 'yes') { %>
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',<% } %><% if (pwa === 'yes') { %>
     '@nuxtjs/pwa',<% } %><% if (eslint === 'yes') { %>
     '@nuxtjs/eslint-module',<% } %>
   ],
+
+  /*
+  ** Nuxt.js dev-modules
+  */
+  devModules: [
+    '@nuxtjs/tailwindcss'
+  ],
   <% if (axios === 'yes') { %>
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -51,14 +58,6 @@ module.exports = {
   axios: {
     // See https://axios.nuxtjs.org/options
   },<% } %>
-
-  /*
-  ** PurgeCSS
-  ** https://github.com/Developmint/nuxt-purgecss
-  */
-  purgeCSS: {
-    mode: 'postcss'
-  },
 
   /*
   ** This option is given directly to the vue-router Router constructor
@@ -79,8 +78,6 @@ module.exports = {
       // Add plugin names as key and arguments as value
       // Disable a plugin by passing false as value
       plugins: {
-        'postcss-url': {},
-        tailwindcss: './tailwind.config.js',
         'cssnano': {
           preset: 'default',
           discardComments: { removeAll: true },
@@ -96,6 +93,7 @@ module.exports = {
         }
       }
     },
+
     /*
     ** You can extend webpack config here
     */
